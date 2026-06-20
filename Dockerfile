@@ -28,3 +28,7 @@ RUN a2enmod rewrite
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 EXPOSE 80
+
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
